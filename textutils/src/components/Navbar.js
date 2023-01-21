@@ -13,7 +13,7 @@ export default function Navbar(props) {
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" >Home</a>
+            <a class="nav-link active" aria-current="page" >{props.Home}</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" >{props.about}</a>
@@ -46,4 +46,11 @@ export default function Navbar(props) {
 
 
 Navbar.propTypes = {title : PropTypes.string,
-about : PropTypes.string} 
+about : PropTypes.string,
+Home : PropTypes.string
+} 
+
+
+Navbar.defaultProps = {
+    title: 'TextUtlis'
+  };
