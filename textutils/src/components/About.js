@@ -143,6 +143,8 @@ export default function About() {
             setmyStyle({
               color: "white",
               backgroundColor: "black",
+              border: '1px solid white'
+
             });
             setbtntext("Enable Light Mode");
           }}}

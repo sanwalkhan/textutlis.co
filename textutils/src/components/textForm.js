@@ -16,6 +16,22 @@ export default function TXextForm(props) {
   const handleonchange = (e) => {
     settext(e.target.value);
   };
+
+  const clearText= ()=>{
+    settext(" ")
+  }
+
+
+  const handleCopy= () =>{
+    var text = document.getElementById("box")
+    text.select(); 
+    navigator.clipboard.writeText(text.value)
+  }
+
+  const handleExtraSpaces = () =>{
+    let newtext = text.split(/[ ]+/);
+    settext(newtext.join(" "))
+  }
   return (
     <div>
     <div className="container">
@@ -37,6 +53,20 @@ export default function TXextForm(props) {
       <button className="btn btn-secondary mx-3" onClick={handleClickLOC}>
         Convert to LowerCase
       </button>
+      <button className="btn btn-primary mx-3" onClick={clearText}>
+      Clear Text
+    </button>
+
+    <button className="btn btn-primary mx-3" onClick={handleCopy}>
+      Copy Text
+    </button>
+
+    <button className="btn btn-primary mx-3" onClick={handleExtraSpaces}>
+      Remove Extra Spaces
+    </button>
+
+
+
     </div>
     <div className="container my-3">
     <h3>Your Text Summary</h3>
