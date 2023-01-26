@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 export default function TXextForm(props) {
-  const [text, settext] = useState("Enter text Here...!");
+  const [text, settext] = useState("");
 
   const handleClickUPC = () => {
     let newtext = text.toUpperCase();
@@ -24,7 +24,7 @@ export default function TXextForm(props) {
 
   const handleCopy= () =>{
     var text = document.getElementById("box")
-    text.select(); 
+    text.select()
     navigator.clipboard.writeText(text.value)
   }
 
@@ -34,13 +34,14 @@ export default function TXextForm(props) {
   }
   return (
     <div>
-    <div className="container">
+    <div className="container"  style={{color:props.mode === 'dark' ? 'white' : '#042743' }}>
       <h3>{props.heading}</h3>
 
       <div className="mb-3">
         <textarea
           className="form-control"
           value={text}
+          style={{backgroundColor:props.mode === 'dark' ? 'grey' : 'white' , color:props.mode === 'dark' ? 'white' : '#042743'  }}
           onChange={handleonchange}
           id="box"
           rows="8"
@@ -50,7 +51,7 @@ export default function TXextForm(props) {
         Convert to Uppercase
       </button>
       
-      <button className="btn btn-secondary mx-3" onClick={handleClickLOC}>
+      <button className="btn btn-primary mx-3" onClick={handleClickLOC}>
         Convert to LowerCase
       </button>
       <button className="btn btn-primary mx-3" onClick={clearText}>
@@ -68,13 +69,13 @@ export default function TXextForm(props) {
 
 
     </div>
-    <div className="container my-3">
+    <div className="container my-3" style={{color:props.mode === 'dark' ? 'white' : '#042743' }}>
     <h3>Your Text Summary</h3>
     <p>{text.split(" ").length} Words</p>
     <p>{text.length} Caracters</p>
     <p>{0.008 * text.split(" ").length} Minutes to read </p>
     <h4>Preview</h4>
-    <p>{text}</p>
+    <p>{text.length>0 ? text:"Enter someting to preview it here"}</p>
     </div>
 
     </div>
