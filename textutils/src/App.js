@@ -3,7 +3,8 @@ import "./App.css";
 import Alert from "./components/alert";
 import Navbar from "./components/Navbar";
 import TextForm from "./components/textForm";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import {Switch} from 'react-router-dom'
 import About from "./components/About";
 
 function App() {
@@ -48,7 +49,7 @@ function App() {
       <Alert alert={alert} />
       
       <div className="container my-3">
-     <Routes>
+
      <Route path="/about">
       <About/>
       </Route>
@@ -59,8 +60,7 @@ function App() {
           heading="Enter Your Text to Analyze"
         />
       </Route>
-      
-     </Routes>
+  
       
       </div>
     </BrowserRouter>
