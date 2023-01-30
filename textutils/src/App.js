@@ -34,7 +34,7 @@ function App() {
     });
     setTimeout(() => {
       setalert(null);
-    }, 1500);
+    }, 3000);
   };
 
   return (
@@ -63,7 +63,7 @@ function App() {
                 />
               }
             />
-            <Route exact path="/about" element={<About />} />
+            <Route exact path="/about" element={<About mode={mode} />} />
           </Routes>
         </div>
       </Router>

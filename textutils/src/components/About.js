@@ -1,34 +1,16 @@
-import React, { useState } from "react";
+import React from "react";
+// import { shouldProcessLinkClick } from "react-router-dom/dist/dom";
 
-export default function About() {
-  const [myStyle, setmyStyle] = useState({
-    color: "white",
-    backgroundColor: "black",
-  });
-  const [btntext, setbtntext] = useState("Enable Dark Mode");
+export default function About(props) {
 
-//   const toggleStyle = () => {
-    // if (myStyle.color === "white") {
-    //   setmyStyle({
-    //     color: "black",
-    //     backgroundColor: "white",
-    //   });
-    //   setbtntext("Enable Dark Mode");
-    // } 
-    // else {
-    //   setmyStyle({
-    //     color: "white",
-    //     backgroundColor: "black",
-    //   });
-    //   setbtntext("Enacble Light Mode");
-    // }
-//   };
-
-
+  let myStyle = {
+    color : props.mode === 'dark' ? 'white' : 'rgb(51 89 118)',
+    backgroundColor : props.mode === 'dark' ? 'rgb(51 89 118)' : 'white'
+  }
 
   return (
     <div className="container" style={myStyle}>
-      <h3 className="my-3">About Us</h3>
+      <h3 className="my-3" style={{color: props.mode ==='dark'?'white':"#rgb(51 89 118)"}}>About Us</h3>
       <div className="accordion" id="accordionExample">
         <div className="accordion-item" style={myStyle}>
           <h2 className="accordion-header" id="headingOne">
@@ -41,7 +23,7 @@ export default function About() {
               aria-controls="collapseOne"
               style={myStyle}
             >
-              Accordion Item #1
+              Analyze Your Text
             </button>
           </h2>
           <div
@@ -73,7 +55,7 @@ export default function About() {
               aria-controls="collapseTwo"
               style={myStyle}
             >
-              Accordion Item #2
+              Free To Use
             </button>
           </h2>
           <div
@@ -105,7 +87,7 @@ export default function About() {
               aria-controls="collapseThree"
               style={myStyle}
             >
-              Accordion Item #3
+              Browser Compatable
             </button>
           </h2>
           <div
@@ -126,31 +108,6 @@ export default function About() {
             </div>
           </div>
         </div>
-      </div>
-
-      <div className="container my-3">
-        <button
-          type="button"
-          className="btn btn-primary"
-          onClick={()=>{ if (myStyle.color === "white") {
-            setmyStyle({
-              color: "black",
-              backgroundColor: "white",
-            });
-            setbtntext("Enable Dark Mode");
-          } 
-          else {
-            setmyStyle({
-              color: "white",
-              backgroundColor: "black",
-              border: '1px solid white'
-
-            });
-            setbtntext("Enable Light Mode");
-          }}}
-        >
-          {btntext}
-        </button>
       </div>
     </div>
   );
