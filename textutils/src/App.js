@@ -47,6 +47,7 @@ function App() {
           mode={mode}
           togglemode={toggleMode}
           showAlert={showAlert}
+          className = {({ isActive }) =>`nav-link ${isActive && 'active'}`}
         />
         <Alert alert={alert} />
 

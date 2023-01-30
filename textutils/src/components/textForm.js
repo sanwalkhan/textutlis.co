@@ -25,9 +25,9 @@ export default function TXextForm(props) {
   };
 
   const handleCopy = () => {
-    var text = document.getElementById("box");
-    text.select();
-    navigator.clipboard.writeText(text.value);
+    // var text = document.getElementById("box");
+    // text.select();
+    navigator.clipboard.writeText(text);
 
     props.showAlert("Text Copied", "success");
   };
@@ -84,7 +84,7 @@ export default function TXextForm(props) {
         style={{ color: props.mode === "dark" ? "white" : "#042743" }}
       >
         <h3>Your Text Summary</h3>
-        <p>{text.split(" ").filter((element)=>{return element.length !==0}).length} Words &  {text.length} Caracters</p>
+        <p>{text.split(/\s+/).filter((element)=>{return element.length !==0}).length} Words &  {text.length} Caracters</p>
         <p> {0.008 * text.split(" ").filter((element)=>{return element.length !==0}).length} Minutes to read </p>
         <h4>Preview</h4>
         <p>{text.length > 0 ? text : "Nothing to preview"}</p>
