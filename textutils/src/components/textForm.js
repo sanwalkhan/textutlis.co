@@ -20,7 +20,7 @@ export default function TXextForm(props) {
   };
 
   const clearText = () => {
-    settext(" ");
+    settext("");
     props.showAlert("Text Cleared", "success");
   };
 
