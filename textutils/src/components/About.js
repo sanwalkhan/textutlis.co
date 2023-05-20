@@ -82,8 +82,9 @@ export default function About(props) {
               
               Let's build something amazing together!
               Please visit my Website 
-              <a href="https://mypersonal-six.vercel.app/"><strong>Website</strong></a>
-            </div>
+              <a target="_blank" rel="noreferrer" href="https://mypersonal-six.vercel.app/"><strong>Website</strong></a>
+            
+              </div>
           </div>
         </div>
         <div className="accordion-item" style={myStyle}>
@@ -97,7 +98,7 @@ export default function About(props) {
               aria-controls="collapseThree"
               style={myStyle}
             >
-              About
+              Contact ME
             </button>
           </h2>
           <div
@@ -107,7 +108,7 @@ export default function About(props) {
             data-bs-parent="#accordionExample"
           >
             <div className="accordion-body" style={myStyle}>
-              This app is completely free of use and it is browser compatible
+              <a href="mailto:thissanwalkhan@gmail.com"> <strong>Say Hello</strong> </a>
             </div>
           </div>
         </div>
