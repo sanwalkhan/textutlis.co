@@ -2,15 +2,19 @@ import React from "react";
 // import { shouldProcessLinkClick } from "react-router-dom/dist/dom";
 
 export default function About(props) {
-
   let myStyle = {
-    color : props.mode === 'dark' ? 'white' : 'rgb(51 89 118)',
-    backgroundColor : props.mode === 'dark' ? 'rgb(51 89 118)' : 'white'
-  }
+    color: props.mode === "dark" ? "white" : "rgb(51 89 118)",
+    backgroundColor: props.mode === "dark" ? "rgb(51 89 118)" : "white",
+  };
 
   return (
     <div className="container" style={myStyle}>
-      <h3 className="my-3" style={{color: props.mode ==='dark'?'white':"#rgb(51 89 118)"}}>About Us</h3>
+      <h3
+        className="my-3"
+        style={{ color: props.mode === "dark" ? "white" : "#rgb(51 89 118)" }}
+      >
+        About Us
+      </h3>
       <div className="accordion" id="accordionExample">
         <div className="accordion-item" style={myStyle}>
           <h2 className="accordion-header" id="headingOne">
@@ -23,7 +27,7 @@ export default function About(props) {
               aria-controls="collapseOne"
               style={myStyle}
             >
-              Analyze Your Text
+              About App
             </button>
           </h2>
           <div
@@ -33,14 +37,16 @@ export default function About(props) {
             data-bs-parent="#accordionExample"
           >
             <div className="accordion-body" style={myStyle}>
-              <strong>This is the first item's accordion body.</strong> It is
-              shown by default, until the collapse plugin adds the appropriate
-              classes that we use to style each element. These classes control
-              the overall appearance, as well as the showing and hiding via CSS
-              transitions. You can modify any of this with custom CSS or
-              overriding our default variables. It's also worth noting that just
-              about any HTML can go within the <code>.accordion-body</code>,
-              though the transition does limit overflow.
+              <strong>TextUtils</strong> 
+               is a versatile text and word counter built with React. It
+              provides a range of useful features to enhance your text editing
+              experience. With our app, you can effortlessly count the number of
+              words in your text, convert the text to uppercase or lowercase
+              with a single click, and eliminate any extra spaces for clean
+              formatting. Additionally, you can easily copy the text to your
+              clipboard for quick sharing or clearing it with just one button.
+              Simplify your text manipulation tasks and boost your productivity
+              with our intuitive and user-friendly word and text counter app
             </div>
           </div>
         </div>
@@ -55,7 +61,7 @@ export default function About(props) {
               aria-controls="collapseTwo"
               style={myStyle}
             >
-              Free To Use
+              About Me
             </button>
           </h2>
           <div
@@ -66,13 +72,17 @@ export default function About(props) {
           >
             <div className="accordion-body" style={myStyle}>
               <strong>This is the second item's accordion body.</strong> It is
-              hidden by default, until the collapse plugin adds the appropriate
-              classes that we use to style each element. These classes control
-              the overall appearance, as well as the showing and hiding via CSS
-              transitions. You can modify any of this with custom CSS or
-              overriding our default variables. It's also worth noting that just
-              about any HTML can go within the <code>.accordion-body</code>,
-              though the transition does limit overflow.
+              Hello! I'm Sanwal, a software engineer based in Pakistan.
+
+              I'm a Computer Science professional with a bachelor's degree. I specialize in React development and database systems. With expertise in React.js, Redux, SQL, and various database technologies, I have a strong foundation in building responsive interfaces, optimizing web performance, and collaborating with cross-functional teams.I have worked in engineering, development Various Companies.
+              
+              Passionate about staying up-to-date with the latest technologies, I continuously seek growth opportunities to enhance my skills and deliver top-notch solutions. I strive to create elegant and user-friendly applications that provide exceptional user experiences.
+              
+              If you're looking for a dedicated and skilled React developer with a focus on database systems, let's connect and discuss how we can work together to bring your ideas to life.
+              
+              Let's build something amazing together!
+              Please visit my Website 
+              <a href="https://mypersonal-six.vercel.app/"><strong>Website</strong></a>
             </div>
           </div>
         </div>
@@ -87,7 +97,7 @@ export default function About(props) {
               aria-controls="collapseThree"
               style={myStyle}
             >
-              Browser Compatable
+              About
             </button>
           </h2>
           <div
@@ -97,14 +107,7 @@ export default function About(props) {
             data-bs-parent="#accordionExample"
           >
             <div className="accordion-body" style={myStyle}>
-              <strong>This is the third item's accordion body.</strong> It is
-              hidden by default, until the collapse plugin adds the appropriate
-              classes that we use to style each element. These classes control
-              the overall appearance, as well as the showing and hiding via CSS
-              transitions. You can modify any of this with custom CSS or
-              overriding our default variables. It's also worth noting that just
-              about any HTML can go within the <code>.accordion-body</code>,
-              though the transition does limit overflow.
+              This app is completely free of use and it is browser compatible
             </div>
           </div>
         </div>
