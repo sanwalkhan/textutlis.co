@@ -71,7 +71,6 @@ export default function About(props) {
             data-bs-parent="#accordionExample"
           >
             <div className="accordion-body" style={myStyle}>
-              <strong>This is the second item's accordion body.</strong> It is
               Hello! I'm Sanwal, a software engineer based in Pakistan.
 
               I'm a Computer Science professional with a bachelor's degree. I specialize in React development and database systems. With expertise in React.js, Redux, SQL, and various database technologies, I have a strong foundation in building responsive interfaces, optimizing web performance, and collaborating with cross-functional teams.I have worked in engineering, development Various Companies.
