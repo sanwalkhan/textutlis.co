@@ -44,16 +44,16 @@ export default function Navbar(props) {
                 </Link>
                 <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                   <li>
-                    <Link className="dropdown-item" to="/">Action</Link>
+                    <Link className="dropdown-item" to="/">Free to use</Link>
                   </li>
                   <li>
-                    <Link className="dropdown-item" to="/">Another action</Link>
+                    <Link className="dropdown-item" to="/">Browser Compatible</Link>
                   </li>
                   <li>
                     <hr className="dropdown-divider" />
                   </li>
                   <li>
-                    <Link className="dropdown-item" to="/">Something else here</Link>
+                    <Link className="dropdown-item" to="/">___</Link>
                   </li>
                 </ul>
               </li>
